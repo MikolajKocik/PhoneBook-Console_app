@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Phone_Book
+namespace Phone_Book;
+
+internal class DeleteContact
 {
-    internal class DeleteContact
-    {
-    }
 }

@@ -21,12 +21,13 @@ public class Program
             display("(4) Wyświetl dany kontakt");
             display("(5) Dodaj kontakt do ulubionych");
             display("(6) Wyjdź");
-
+            
             Console.WriteLine();
 
             if (!int.TryParse(Console.ReadLine(), out int option))
             {
-                Console.WriteLine("Niepoprawna opcja. Wprowadź liczbę.");
+                Console.WriteLine("\nNiepoprawna opcja. Wprowadź liczbę.");
+                Console.WriteLine("-------------------------------------");
                 continue; // Przejdź do następnej iteracji
             }
             switch (option)

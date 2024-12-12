@@ -14,7 +14,7 @@ namespace Phone_Book
 
         Menu z wyborem opcji 
 
-        
+        może polaczyc z bazą kontakty? (sqlite)
 
 
      */

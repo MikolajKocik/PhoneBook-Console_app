@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Phone_Book
+namespace Phone_Book;
+
+public interface IContactManagement 
 {
-    public interface IContactManagement 
-    {
-        public void Execute();
-    }
+    public void Execute();
 }
