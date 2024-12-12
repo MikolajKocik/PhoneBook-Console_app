@@ -8,9 +8,6 @@ namespace Phone_Book
 {
     public interface IContactManagement 
     {
-        public void Execute(Contact contact)
-        {
-
-        }
+        public void Execute();
     }
 }

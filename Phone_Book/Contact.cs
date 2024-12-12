@@ -8,7 +8,7 @@ namespace Phone_Book
 {
     public class Contact
     {
-        public  required string FirstName { get; set; }
+        public required string FirstName { get; set; }
         public string LastName { get; set; }   
         public required string PhoneNumber { get; set; }
         public bool IsFavourite { get; set; }
@@ -30,9 +30,7 @@ namespace Phone_Book
         public override string ToString()
         {
             return IsFavourite ? 
-                $"{FirstName} - [Ulubiony] {PhoneNumber}": $"{FirstName} - {PhoneNumber}";
+                $"{FirstName} {LastName} - [Ulubiony] {PhoneNumber}": $"{FirstName} {LastName} - {PhoneNumber}";
         }
     }
-
-
 }
