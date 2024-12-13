@@ -10,10 +10,6 @@ namespace Phone_Book
 
         refleksja jako search contact zrobic
 
-        edycja z IsFavourite
-
-        Menu z wyborem opcji 
-
         może polaczyc z bazą kontakty? (sqlite)
 
 
