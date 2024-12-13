@@ -6,13 +6,13 @@ using System.Text.RegularExpressions;
 
 namespace Phone_Book;
 
-public class CreateContact : IContactServices
+public class CreateContact : IContactManagement
 {
 
     private readonly List<Contact> _contacts;
     public CreateContact(List<Contact> contacts)
     {
-        _contacts = contacts;
+        _contacts = contacts ?? new List<Contact>();
     }
 
     public void Execute()
@@ -58,6 +58,7 @@ public class CreateContact : IContactServices
         _contacts.Add(newContact);
 
         Console.WriteLine($"Utworzono nowy kontakt: {newContact}"); // wywołanie metody ToString();
+        Console.WriteLine("Zachowaj identyfikator w celu przyszłych modyfikacji");
 
     }
 }

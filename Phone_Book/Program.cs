@@ -28,7 +28,7 @@ public class Program
             {
                 Console.WriteLine("\nNiepoprawna opcja. Wprowadź liczbę.");
                 Console.WriteLine("-------------------------------------");
-                continue; // Przejdź do następnej iteracji
+                option = int.Parse(Console.ReadLine());
             }
             switch (option)
             {

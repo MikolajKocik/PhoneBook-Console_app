@@ -6,26 +6,10 @@ using System.Threading.Tasks;
 
 namespace Phone_Book;
 
-public static class EditContact
+public class EditContact
 {
-    public static void SetAsFavourite(this IEnumerable<Contact> contacts, string phoneNumber)
+  public void Execute()
     {
 
-        if (contacts == null)
-        {
-            throw new ArgumentNullException(nameof(contacts));
-        }
-        else if (string.IsNullOrEmpty(phoneNumber))
-        {
-            throw new ArgumentException("Numer telefonu nie może być null albo pusty", nameof(phoneNumber));
-        }
-
-        foreach (var contact in contacts)
-        {
-            if (contact.PhoneNumber.Contains(phoneNumber, StringComparison.OrdinalIgnoreCase))
-            {
-                contact.IsFavourite = true;
-            }
-        }
     }
 }
