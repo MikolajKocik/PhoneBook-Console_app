@@ -16,6 +16,7 @@ public class SearchContactByPhoneNumber : IContactManagement
     }
     public void Execute()
     {
+
         Console.WriteLine("Podaj kontakt do wyszukania (imie/nazwisko/numer)");
         string userInput = Console.ReadLine();
 
@@ -32,7 +33,18 @@ public class SearchContactByPhoneNumber : IContactManagement
 
         if (contact != null)
         {
-            Console.WriteLine($"Pomyślnie wyszukano kontakt: {contact}");
+            Console.WriteLine("Znaleziono kontakt:");
+
+            Type contactType = contact.GetType();
+
+            var properties = contactType.GetProperties();
+
+
+            foreach (var property in properties)
+            {
+                var propValue = property.GetValue(contact);
+                Console.WriteLine($"{property.Name}: {propValue}");  
+            }
         }
         else
         {

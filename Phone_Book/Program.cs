@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Phone_Book;
 
@@ -37,12 +38,37 @@ public class Program
                     create.Execute();
                     break;
                 case 2:
+                    EditContact edit = new EditContact(_contacts);
+                    edit.Execute();
                     break;
-                case 3:                  
+                case 3:             
+                    SearchAllContacts searchAllContacts = new SearchAllContacts(_contacts);
+                    searchAllContacts.Execute();
                     break;
                 case 4:
+                    SearchContactByPhoneNumber search = new SearchContactByPhoneNumber(_contacts);
+                    search.Execute();
                     break;
                 case 5:
+                    Console.WriteLine("Podaj numer telefonu kontaktu, który chcesz oznaczyć jako ulubiony:");
+                    string phoneNumber = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(phoneNumber))
+                    {
+                        Console.WriteLine("Numer telefonu nie może być pusty.");
+                    }
+                    else
+                    {
+                        try
+                        {
+                            _contacts.SetAsFavourite(phoneNumber); // Wywołanie metody rozszerzającej
+                            Console.WriteLine("Operacja zakończona.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Wystąpił błąd: {ex.Message}");
+                        }
+                    }
                     break;
                 default:
                     break;
