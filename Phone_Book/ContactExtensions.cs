@@ -32,6 +32,7 @@ public static class ContactExtensions
         while (true)
         {
             Console.WriteLine("Dodaj kontakt do ulubionych [dodaj], Usuń kontakt z ulubionych [usun], Wyjdz [0]");
+            Option:
             string option = Console.ReadLine();
 
             string patternAdd = @"\b[dD]odaj\b";
@@ -45,7 +46,7 @@ public static class ContactExtensions
                  !Regex.IsMatch(option, close)))
             {
                 Console.WriteLine("Niepoprawna lub pusta wartość, spróbuj ponownie.");
-                continue; // Powrót do początku pętli
+                goto Option; 
             }
 
            

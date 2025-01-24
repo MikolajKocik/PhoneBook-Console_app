@@ -10,7 +10,7 @@ public class Contact
 {
     public Guid Id { get; private set; }
     public required string FirstName { get; set; }
-    public string LastName { get; set; }   
+    public string? LastName { get; set; } 
     public required string PhoneNumber { get; set; }
     public bool IsFavourite { get; set; }
 

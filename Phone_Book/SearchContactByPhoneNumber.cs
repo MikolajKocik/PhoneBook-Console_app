@@ -18,12 +18,13 @@ public class SearchContactByPhoneNumber : IContactManagement
     {
 
         Console.WriteLine("Podaj kontakt do wyszukania (imie/nazwisko/numer)");
+        UserInput:
         string userInput = Console.ReadLine();
 
         while (string.IsNullOrWhiteSpace(userInput))
         {
             Console.WriteLine("Podano nieprawidłową wartość, spróbuj ponownie");
-            userInput = Console.ReadLine();
+            goto UserInput;
         }
 
         var contact = _contacts.FirstOrDefault(c =>

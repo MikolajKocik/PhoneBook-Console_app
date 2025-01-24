@@ -10,10 +10,13 @@ public class Program
     static void Main()
     {
         Display display = value => Console.WriteLine(value);
+        Console.Title = "Phone_Book";
 
         while (true)
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             display("===TWOJA KSIĄŻKA TELEFONICZNA===");
+            Console.ForegroundColor = ConsoleColor.White;
             display("\nWybierz opcję: ");
 
             display("\n(1) Dodaj nowy kontakt");
